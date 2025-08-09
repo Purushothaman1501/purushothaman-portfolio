@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Purushothaman N | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #e5e5e5; color: #000; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Hero Split */
+    .hero {
+        display: flex;
+        height: 100vh;
+    }
+    .left {
+        background: #d9d9d9;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem;
+    }
+    .left h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .left h1 { font-size: 2.5rem; font-weight: bold; }
+    .left h2 { font-size: 1rem; font-weight: normal; color: gray; margin-bottom: 2rem; }
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .social-icons a {
+        background: #fff;
+        padding: 0.7rem;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        color: black;
+        transition: background 0.3s;
+    }
+    .social-icons a:hover { background: #ccc; }
+
+    .right {
+        background: #000;
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 2rem;
+    }
+    nav {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    nav a { color: white; font-weight: bold; }
+    .contact-btn {
+        background: white;
+        color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    .profile-img {
+        max-height: 90%;
+        object-fit: cover;
+        border-radius: 50% / 35%;
+        padding-right: 46px;
+    }
+
+    /* Sections */
+    section { padding: 2rem 3rem; text-align: center; }
+    .section-con{ max-width: 1200px;
+    margin: auto; }
+    .section-title {
+        border: 2px solid black;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+    }
+    .about-text { max-width: 700px; margin: auto; color: #444; line-height: 1.6; }
+
+    /* Skills Grid */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-item img { width: 50px; height: 50px; margin-bottom: 0.5rem; }
+
+    .contact-me { background: #000; /* solid black */
+    padding: 2rem 0; /* space inside */
+    width: 100%; /* make sure it spans full width */}
+    .contact-title{
+        border: 2px solid rgb(244, 244, 244);
+        color: white;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+        margin-top: 9px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+    <div class="left">
+        <h3>Hi, I am</h3>
+        <h1>Purushothaman N</h1>
+        <h2>Software Engineer / Machine Learning Enthusiast</h2>
+        <div class="social-icons">
+            <a href="mailto:purushothpurushoth1501@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/purushoth-n" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="right">
+        <nav>
+            <a href="#about">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact" class="contact-btn">Contact Me</a>
+        </nav>
+        <img src="web-profile.png" alt="Profile" class="profile-img">
+    </div>
+</div>
+
+<!-- About -->
+<section id="about">
+    <div class="section-title">ABOUT ME</div>
+    <p class="about-text">
+        I am a passionate Software Engineer with strong expertise in Machine Learning, Data Analysis, and Web Application Development. I hold an M.Sc in Data Science & Business Analysis and have hands-on experience with Python, SQL, Machine Learning, Django REST, and modern data visualization tools such as Power BI and Tableau.
+        <br> <br> At SmartX Technologies, I contributed to multiple innovative projects, including developing EmoSentia, a real-time emotion and sentiment detection system for video speech using DeepFace and advanced ML/DL techniques; building a Sign Language Recognition Web-App using Bi-Directional LSTM for precise gesture classification; and designing AptPath, 
+        a robust Django REST-based web application with well-structured APIs. I also managed relational databases (PostgreSQL, MySQL, MS SQL), performing user management, access control, and optimization tasks to ensure data integrity and system performance.
+        <br><br>I thrive on creating impactful, user-focused solutions and enjoy working at the intersection of artificial intelligence, software engineering, and data-driven decision-making.
+    </p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <div class="section-title">SKILLS</div>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <span>Python</span>
+        </div>
+        <div class="skill-item">
+            <img src="C:\Users\Inno\Desktop\python learning\reshot-icon-machine-learning-8W259EYA3K.svg" alt="CSS3">
+            <span>Machine Learning</span>
+        </div>
+        
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+            <span>Django REST</span>
+        </div>
+        
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            <span>MySQL</span>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+            <span>PostgreSQL</span>
+        </div>
+        
+    </div>
+</section>
+<section id="skills">
+    <div class="section-title">DATA ANALYSIS SKILLS</div>
+    <div class="skills-grid"style="transform: translate(10%, -16%);">
+        <div class="skill-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI">
+            <span>Power BI</span>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau">
+            <span>Tableau</span>
+        </div>
+        <div class="skill-item">
+            <img src="https://www.logo.wine/a/logo/Microsoft_Excel/Microsoft_Excel-Logo.wine.svg" alt="Excel">
+            <span>Excel</span>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="CSS3">
+            <span>Pandas</span>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="CSS3">
+            <span>NumPy</span>
+        </div>
+    <div>
+    
+        
+</section>
+
+<!-- Portfolio -->
+<!-- Portfolio -->
+<section id="portfolio">
+    <div class="section-title">PROJECTS</div>
+    <div class="projects-grid" style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+        padding: 0 2rem;
+    ">
+        <!-- Project 1 -->
+        <div class="project-card" style="
+            background: rgb(246, 244, 244);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
+                <img src="emotion-detection.jpg" alt="EmoSentia Icon" style="width: 265px;height: 152px;">
+            </div>
+            <div style="padding:1.2rem;">
+                <h3 style="font-size:1.2rem; font-weight:bold;">EmoSentia</h3>
+                <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">
+                    Real-time emotion & sentiment detection in video speech using DeepFace, ML & NLP.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Project 2 -->
+        <div class="project-card" style="
+            background: rgb(246, 244, 244);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
+                <img src="sign-lang.jpg" alt="sign lang Icon" style="width: 265px;height: 152px;">
+            </div>
+            <div style="padding:1.2rem;">
+                <h3 style="font-size:1.2rem; font-weight:bold;">Sign Language Recognition App</h3>
+                <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">
+                    Converts sign language videos into text using Bi-Directional LSTM for accurate translation.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" style="
+            background: rgb(246, 244, 244);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
+                <img src="agri-watch.jpg" alt="agriwatch Icon" style="width: 265px;height: 152px;">
+            </div>
+            <div style="padding:1.2rem;">
+                <h3 style="font-size:1.2rem; font-weight:bold;">Agri Watch</h3>
+                <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">
+                    LSTM-based forecasting for flower prices & demand, aiding farmers in decision-making.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" style="
+            background: rgb(246, 244, 244);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
+                <img src="powerbi.jpg" alt="powerbi Icon" style="width: 265px;height: 156px;">
+            </div>
+            <div style="padding:1.2rem;">
+                <h3 style="font-size:1.2rem; font-weight:bold;">Textiles Sales Analysis</h3>
+                <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">
+                    Power BI dashboards with slicers, filters, and data transformation for business insights.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" style="background:#000; padding:2rem 0;">
+    <div class="section-con">
+        <div class="contact-title">CONTACT ME</div>
+        <p class="about-text" style="color:white;">
+            Email me at <a href="mailto:purushothpurushoth1501@gmail.com" style="color:#38bdf8;">
+                purushothpurushoth1501@gmail.com
+            </a>
+        </p>
+    </div>
+    <br><br>
+     <footer style="text-align: center; color: white;";>
+        © 2025 Purushothaman N | All rights reserved.
+    </footer>
+</section>
+
+   
+</body>
+</html>
