@@ -9,11 +9,13 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background: #e5e5e5; color: #000; }
     a { text-decoration: none; color: inherit; }
+    html, body { overflow-x: hidden; }
 
-    /* Hero Split */
+    /* Hero Section */
     .hero {
         display: flex;
         height: 100vh;
+        position: relative;
     }
     .left {
         background: #d9d9d9;
@@ -50,13 +52,21 @@
         align-items: flex-end;
         padding: 2rem;
     }
-    nav {
+
+    /* Navigation */
+    header {
         position: absolute;
-        top: 2rem;
-        right: 3rem;
+        top: 1rem;
+        right: 1rem;
         display: flex;
-        gap: 2rem;
         align-items: center;
+        gap: 1.5rem;
+        z-index: 10;
+    }
+    nav ul {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
     }
     nav a { color: white; font-weight: bold; }
     .contact-btn {
@@ -67,17 +77,35 @@
         font-size: 0.9rem;
         font-weight: bold;
     }
-    .profile-img {
-        max-height: 90%;
-        object-fit: cover;
-        border-radius: 50% / 35%;
-        padding-right: 46px;
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: none;
+        font-size: 1.8rem;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
+
+    /* Profile Image */
+    /* .profile-img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+        border-radius: 50% / 35%;
+        object-fit: cover;
+    } */
+
+    .profile-img {
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 50% / 35%;
+    max-width: 350px;
+    }   
 
     /* Sections */
     section { padding: 2rem 3rem; text-align: center; }
-    .section-con{ max-width: 1200px;
-    margin: auto; }
     .section-title {
         border: 2px solid black;
         display: inline-block;
@@ -100,13 +128,18 @@
         flex-direction: column;
         align-items: center;
     }
-    .skill-item img { width: 50px; height: 50px; margin-bottom: 0.5rem; }
+    .skill-item img { width: 50px; height: auto; }
 
-    .contact-me { background: #000; /* solid black */
-    padding: 2rem 0; /* space inside */
-    width: 100%; /* make sure it spans full width */}
-    .contact-title{
-        border: 2px solid rgb(244, 244, 244);
+    .projects-img { width: 100%; height: auto; }
+
+    /* Contact Section */
+    .contact-me {
+        background: #000;
+        padding: 2rem 0;
+        width: 100%;
+    }
+    .contact-title {
+        border: 2px solid #f4f4f4;
         color: white;
         display: inline-block;
         padding: 0.5rem 1rem;
@@ -115,12 +148,178 @@
         margin-bottom: 2rem;
         margin-top: 9px;
     }
+
+    nav {
+    display: flex
+;
+    gap: 2rem;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    /* right: 3rem; */
+}
+
+    /* Responsive */
+    @media (max-width: 750px) {
+        header {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left {
+        padding: 2rem 1rem;
+        align-items: center;
+        }
+        .left h1, .left h2, .left h3 {
+            text-align: center;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+
+        /* Profile image center */
+        .right {
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .profile-img {
+            max-width: 70%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .section-title {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            justify-items: center;
+        }
+        .projects-grid {
+            grid-template-columns: 1fr;
+            padding: 0 1rem;
+        }
+        nav {
+            display: none;
+            position: absolute;
+            top: 3rem;
+            right: 0;
+            background: black;
+            width: 100%;
+            text-align: center;   
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+        .menu-toggle {
+            display: block;
+        }
+        nav.show {
+            display: block;
+        }
+        .hero {
+            flex-direction: column;
+            height: auto;
+        }
+        .profile-img {
+            max-width: 80%;
+        }
+
+         /* Mobile Menu Overlay */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            
+            /* z-index: 999; */
+             display: flex;            /* force flex in mobile */
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 2000;
+        }
+
+        nav.active {
+            transform: translateX(0);
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            display: block;
+        }
+
+        .contact-btn {
+            background: white;
+            color: black;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+
+        /* Hamburger Button */
+        .menu-toggle {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 3000;   
+            cursor: pointer;
+            font-size: 2rem;
+            color: white; 
+        }
+        
+}
+    
 </style>
 </head>
 <body>
-
+<!-- Hamburger Button -->
+<div class="menu-toggle">
+    <i class="fas fa-bars"></i>
+</div>
+<!-- Navigation -->
+<nav>
+    <a href="#about">About me</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Projects</a>
+    <a href="#contact" class="contact-btn">Contact Me</a>
+</nav>
 <!-- Hero -->
 <div class="hero">
+    <header>
+            <!-- <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact" class="contact-btn">Contact Me</a></li>
+                </ul>
+            </nav> -->
+        </header>
     <div class="left">
         <h3>Hi, I am</h3>
         <h1>Purushothaman N</h1>
@@ -141,6 +340,9 @@
         <img src="web-profile.png" alt="Profile" class="profile-img">
     </div>
 </div>
+
+
+
 
 <!-- About -->
 <section id="about">
@@ -318,6 +520,23 @@
     </footer>
 </section>
 
-   
+
+<!-- JS -->
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const icon = menuToggle.querySelector('i');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        if (nav.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+</script>
 </body>
 </html>
