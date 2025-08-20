@@ -364,7 +364,7 @@
             <span>Python</span>
         </div>
         <div class="skill-item">
-            <img src="C:\Users\Inno\Desktop\python learning\reshot-icon-machine-learning-8W259EYA3K.svg" alt="CSS3">
+            <img src="machine-learning.png" alt="CSS3">
             <span>Machine Learning</span>
         </div>
         
@@ -386,7 +386,9 @@
 </section>
 <section id="skills">
     <div class="section-title">DATA ANALYSIS SKILLS</div>
-    <div class="skills-grid"style="transform: translate(10%, -16%);">
+    <div class="skills-grid"style="
+        gap: 1rem;
+        margin-top: 1rem;">
         <div class="skill-item">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI">
             <span>Power BI</span>
@@ -432,7 +434,7 @@
             transition: transform 0.3s ease;
         " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
             <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
-                <img src="emotion-detection.jpg" alt="EmoSentia Icon" style="width: 265px;height: 152px;">
+                <img src="emotion-detection.jpg" alt="EmoSentia Icon" style="width: 324px;height: 152px;">
             </div>
             <div style="padding:1.2rem;">
                 <h3 style="font-size:1.2rem; font-weight:bold;">EmoSentia</h3>
@@ -452,7 +454,7 @@
             transition: transform 0.3s ease;
         " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
             <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
-                <img src="sign-lang.jpg" alt="sign lang Icon" style="width: 265px;height: 152px;">
+                <img src="sign-lang.jpg" alt="sign lang Icon" style="width: 324px;height: 152px;">
             </div>
             <div style="padding:1.2rem;">
                 <h3 style="font-size:1.2rem; font-weight:bold;">Sign Language Recognition App</h3>
@@ -471,7 +473,7 @@
             transition: transform 0.3s ease;
         " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
             <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
-                <img src="agri-watch.jpg" alt="agriwatch Icon" style="width: 265px;height: 152px;">
+                <img src="agri-watch.jpg" alt="agriwatch Icon" style="width: 324px;height: 152px;">
             </div>
             <div style="padding:1.2rem;">
                 <h3 style="font-size:1.2rem; font-weight:bold;">Agri Watch</h3>
@@ -490,7 +492,7 @@
             transition: transform 0.3s ease;
         " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
             <div style="background:#d9d9d9; height:150px; display:flex; align-items:center; justify-content:center;">
-                <img src="powerbi.jpg" alt="powerbi Icon" style="width: 265px;height: 156px;">
+                <img src="powerbi.jpg" alt="powerbi Icon" style="width: 324px;height: 156px;">
             </div>
             <div style="padding:1.2rem;">
                 <h3 style="font-size:1.2rem; font-weight:bold;">Textiles Sales Analysis</h3>
@@ -522,7 +524,7 @@
 
 
 <!-- JS -->
-<script>
+<!-- <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const icon = menuToggle.querySelector('i');
@@ -536,7 +538,30 @@
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
         }
+    }); -->
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const icon = menuToggle.querySelector('i');
+    const navLinks = document.querySelectorAll('nav a'); // get all menu links
+
+    // Toggle open/close on hamburger click
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
     });
+
+    // Close menu when clicking any link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
+</script>
+
 </script>
 </body>
 </html>
